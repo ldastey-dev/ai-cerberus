@@ -10,11 +10,11 @@ Guidance on usage here: [Multiple Scanner Setup](https://llm-guard.com/get_start
 ## Features
 
 - **Simple**: Simple services designed to abstract the complexity of complex LLM technologies.
-- **Secure your input**: Scans input payloads through a series of complex scanners returning a risk rating against the following criteria so you can decide how best to proceed
-  - Anonymity: Is there PII or other sensitive information in the payload (e.g banking details) [Anonymisation Scanner](https://llm-guard.com/input_scanners/anonymize/)
-  - Toxicity: Are there signs of toxic language in the payload [Toxicity Scanner](https://llm-guard.com/input_scanners/toxicity/)
-  - Token overload: Is the payload beyond the acceptable token threshold (approx. 4 characters per token) which can lead to a DOS attack on the AI service [Token Limit](https://llm-guard.com/input_scanners/token_limit/)
-  - Prompt Injection: Is there attempted prompt injection in the payload [Prompt Injection Scanner](https://llm-guard.com/input_scanners/prompt_injection/)
+- **Secure your input**: Scans input payloads through a series of complex scanners returning a risk rating against the following criteria so you can decide how best to proceed. Scanner included are:
+  - Anonymity: Is there PII or other sensitive information in the payload (e.g banking details). [Anonymisation Scanner](https://llm-guard.com/input_scanners/anonymize/)
+  - Toxicity: Are there signs of toxic language in the payload. [Toxicity Scanner](https://llm-guard.com/input_scanners/toxicity/)
+  - Token overload: Is the payload beyond the acceptable token threshold (approx. 4 characters per token) which can lead to a DOS attack on the AI service. [Token Limit](https://llm-guard.com/input_scanners/token_limit/)
+  - Prompt Injection: Is there attempted prompt injection in the payload. [Prompt Injection Scanner](https://llm-guard.com/input_scanners/prompt_injection/)
   - Gibberish: Is the input nonsensical. [Gibberish Scanner](https://llm-guard.com/input_scanners/gibberish/)
 
 ## Installation
@@ -78,13 +78,13 @@ curl -X POST http://localhost:5000/evaluate -H "Content-Type: application/json" 
 ### PII
 
 ```bash
-curl -X POST http://localhost:5000/evaluate -H "Content-Type: application/json" -d '{"input": "Name: Alan Turing. Phone: 07123123123. Email: aturing@quintuplet.com"}'
+curl -X POST http://localhost:5000/evaluate -H "Content-Type: application/json" -d '{"input": "Name: Alan Turing. Card Number: 4111111111111111. Phone: 07123123123. Email: aturing@quintuplet.com"}'
 ```
 
 ### Toxicity
 
 ```bash
-curl -X POST http://localhost:5000/evaluate -H "Content-Type: application/json" -d '{"input": "You are horible people who should be shut down!!"}'
+curl -X POST http://localhost:5000/evaluate -H "Content-Type: application/json" -d '{"input": "You are horible people. You should be shut down!!"}'
 ```
 
 ### Token Limit
@@ -95,7 +95,7 @@ curl -X POST http://localhost:5000/evaluate -H "Content-Type: application/json" 
 
 ## License
 
-This project is licensed under the MIT License. See the [MIT License](LICENSE) file for more information.
+This project is licensed under the MIT License. See the [MIT License](https://github.com/ldastey-dev/ai-cerberus?tab=MIT-1-ov-file) file for more information.
 
 ## Contact
 

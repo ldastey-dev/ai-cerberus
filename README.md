@@ -99,4 +99,4 @@ This project is licensed under the MIT License. See the [MIT License](https://gi
 
 ## Contact
 
-For any questions or feedback, please reach out to us at [ldastey@googlemail.com](mailto:ldastey@googlemail.com).
+For any questions or feedback, please reach out to me at [ldastey@googlemail.com](mailto:ldastey@googlemail.com).

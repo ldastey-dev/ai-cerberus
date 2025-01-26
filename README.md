@@ -9,13 +9,15 @@ Guidance on usage here: [Multiple Scanner Setup](https://llm-guard.com/get_start
 
 ## Features
 
-- **Simple**: Simple services designed to abstract the complexity of complex LLM technologies.
-- **Secure your input**: Scans input payloads through a series of complex scanners returning a risk rating against the following criteria so you can decide how best to proceed. Scanner included are:
-  - Anonymity: Is there PII or other sensitive information in the payload (e.g banking details). [Anonymisation Scanner](https://llm-guard.com/input_scanners/anonymize/)
-  - Toxicity: Are there signs of toxic language in the payload. [Toxicity Scanner](https://llm-guard.com/input_scanners/toxicity/)
-  - Token overload: Is the payload beyond the acceptable token threshold (approx. 4 characters per token) which can lead to a DOS attack on the AI service. [Token Limit](https://llm-guard.com/input_scanners/token_limit/)
-  - Prompt Injection: Is there attempted prompt injection in the payload. [Prompt Injection Scanner](https://llm-guard.com/input_scanners/prompt_injection/)
-  - Gibberish: Is the input nonsensical. [Gibberish Scanner](https://llm-guard.com/input_scanners/gibberish/)
+- **Simple**: Simple services designed to abstract the complexity of complex LLM guardrail technologies providing a simplified wrapper service to engage with.
+- **Secures your input**: Scans input payloads through a series of complex scanners returning a risk rating against the following criteria so you can decide how best to proceed. Scanner included are:
+  - [Anonymity](https://llm-guard.com/input_scanners/anonymize/): Is there PII or other sensitive information in the payload (e.g banking details).
+  - [Toxicity](https://llm-guard.com/input_scanners/toxicity/): Are there signs of toxic language in the payload.
+  - [Token overload](https://llm-guard.com/input_scanners/token_limit/): Is the payload beyond the acceptable token threshold (approx. 4 characters per token) which can lead to a DOS attack on the AI service.
+  - [Prompt Injection](https://llm-guard.com/input_scanners/prompt_injection/): Is there attempted prompt injection in the payload.
+  - [Gibberish](https://llm-guard.com/input_scanners/gibberish/): Is the input nonsensical.
+- **Assesses your generated output**: Inspects the output of your Generative model and assesses it against prompt request providing a relevance scoring.
+  - [Relevance](https://llm-guard.com/output_scanners/relevance/): Is the generated output relevant to the prompt.
 
 ## Installation
 

@@ -33,8 +33,6 @@ def evaluate(input_payload, generated_output, scanners):
             print(f"Output {generated_output} is not valid, scores: {relevance_score}")
 
         print(f"Output: {scanner_output}\n")
-
-        # Parse the relevance score
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     finally:

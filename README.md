@@ -113,10 +113,16 @@ curl -X POST http://localhost:5000/evaluate -H "Content-Type: application/json" 
 
 ### Generated Output Scanning Examples
 
-#### Relevance
+#### Relevant Reponse
 
 ```bash
-curl -X POST http://localhost:5001/scanoutput -H "Content-Type: application/json" -d '{"prompt_input": "I would like to book a table at Dasteys 3 Michelin Starred restaurant for 4 people on 14 February at 7pm", "generated_output": "Julius Caesar was a Roman General, Dictator Perpetuo, and Proconsul of the Roman Senate at the time of his death in 44BC"}'
+curl -X POST http://localhost:5001/scanoutput -H "Content-Type: application/json" -d '{"prompt_input": "I would like to book a table at Dasteys 3 Michelin Starred restaurant for 4 people on 14 February at 7pm", "generated_output": "I have made you are reservation for 2 people at Dasteys restaurant on 14 February at 7pm. Have a very pleasant meal."}'
+```
+
+#### Irrelevant Response
+
+```bash
+curl -X POST http://localhost:5001/scanoutput -H "Content-Type: application/json" -d '{"prompt_input": "I would like to book a table at Dasteys 3 Michelin Starred restaurant for 2 people on 14 February at 7pm", "generated_output": "Julius Caesar was a Roman General, Dictator Perpetuo, and Proconsul of the Roman Senate at the time of his death in 44BC"}'
 ```
 
 ## License

@@ -38,7 +38,7 @@ def evaluate(input_payload, generated_output, scanners):
     finally:
         return jsonify({
             "output": {
-                "scanner output": scanner_output, 
+                "scanner_output": scanner_output, 
                 "results_valid": results_valid, 
                 "results_score": relevance_score
             }

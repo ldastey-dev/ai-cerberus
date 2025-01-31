@@ -9,7 +9,7 @@ setup(
         "llm_guard"
     ],
     author='Leigh Dastey',
-    author_email='ldastey@googlemail.com',
+    author_email='ldastey@outlook.com',
     description='Services to support AI guardrails using the LLM Guard library',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',

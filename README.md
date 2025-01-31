@@ -118,7 +118,7 @@ curl -X POST http://localhost:5000/evaluate -H "Content-Type: application/json" 
 #### Relevant Reponse
 
 ```bash
-curl -X POST http://localhost:5001/scanoutput -H "Content-Type: application/json" -d '{"prompt_input": "I would like to book a table at Dasteys 3 Michelin Starred restaurant for 4 people on 14 February at 7pm", "generated_output": "I have made you are reservation for 2 people at Dasteys restaurant on 14 February at 7pm. Have a very pleasant meal."}'
+curl -X POST http://localhost:5001/scanoutput -H "Content-Type: application/json" -d '{"prompt_input": "I would like to book a table at Dasteys 3 Michelin Starred restaurant for 2 people on 14 February at 7pm", "generated_output": "I have made you are reservation for 2 people at Dasteys restaurant on 14 February at 7pm. Have a very pleasant meal."}'
 ```
 
 #### Irrelevant Response
